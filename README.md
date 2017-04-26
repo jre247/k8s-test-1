@@ -1,7 +1,7 @@
 k8s-test
 ===
 
-This repo is used to demonstrate the memory required to run a small Java program in Kubernetes compared to the memory required to run the same image in Kubernetes.
+This repo is used to demonstrate the memory required to run a small Java program in Kubernetes compared to the memory required to run the same image directly in Docker.
 
 #### Run the image on Kubernetes:
 
