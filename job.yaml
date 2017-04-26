@@ -1,0 +1,33 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "k8s-test-1"
+spec:
+  template:
+    metadata:
+      name: k8s-test
+      labels:
+        env: dev
+    spec:
+      containers:
+      - name: k8s-test
+        image: jre247/k8s-test
+        env:
+          - name: JAVA_OPTIONS
+            value: -Xmx25m
+          - name: URL
+            value: <jdbc-url>
+          - name: USERNAME
+            value: <username>
+          - name: PASSWORD
+            value: <password>
+          - name: TABLE_NAME
+            value: <table-name>
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "250m"
+          limits:
+            memory: "32Mi"
+            cpu: "250m"
+      restartPolicy: Never
