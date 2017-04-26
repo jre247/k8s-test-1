@@ -35,6 +35,9 @@ State:		Terminated
 `docker run -m 30m --env-file=settings.env jre247/k8s-test`
 
 
+3. Run `docker ps` and `docker logs <image_id> to check the status of the container. In our testing, the container will not crash.
+
+
 
 
 
