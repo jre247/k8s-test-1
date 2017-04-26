@@ -26,7 +26,7 @@ State:		Terminated
       Finished:		Wed, 26 Apr 2017 11:08:44 -0400
 ```
 
-#### Run the image on Docker
+#### Run the image on Docker:
 
 1. Set the database connection environment variables in settings.env
 
