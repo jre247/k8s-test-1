@@ -34,21 +34,18 @@ State:		Terminated
 
 `docker run -m 30m --env-file=settings.env jre247/k8s-test`
 
-Build the image (optional)
+
+
+
+
+#### (Optional) Building the image
 
 docker build .
 
-Note: Step 2 and 3 below are optional, only if you want to push a new container image to either the provided docker repo or another docker repo of your choosing. Note that we have already provided a ready-to-go image at this docker repo: jre247/k8s-test. If you want to use a different docker repo than the one provided then you will need to follow steps 2 and 3 below.
+The steps below are optional and provided in case you want to modify the docker Image.
 
-Run this command to tag docker container image
+`docker build .`
 
-a) docker tag jre247/k8s-test - You can optionally use a different docker repo, but I've provided this one: jre247/k8s-test
+`docker tag jre247/k8s-test`
 
-Run this command to push the container image to a docker repo:
-
-a) docker push jre247/k8s-test - You can optionally use a different docker repo, but I've provided this one: jre247/k8s-test
-
-Run this command to deploy the job: - kubectl create -f ./job.yaml
-
-a) You can optionally use a different docker repo, but I've provided this one: jre247/k8s-test
-b) If you'd like to use a different docker repo then change the value of "image" within job.yaml to be another value
+`docker push jre247/k8s-test`
